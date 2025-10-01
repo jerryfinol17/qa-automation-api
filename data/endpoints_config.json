@@ -1,0 +1,30 @@
+{
+  "endpoints": {
+    "posts_get": {
+      "method": "GET",
+      "path": "/posts",
+      "params": {
+        "optional_user_filter": {"userId": 1}
+      },
+      "expected_file": "data/expectations/posts_get.json"
+    },
+    "posts_post": {
+      "method": "POST",
+      "path": "/posts",
+      "payload_file": "data/payloads/posts_post.json",
+      "expected_file": "data/expectations/posts_post.json"
+    },
+    "posts_put": {
+      "method": "PUT",
+      "path": "/posts/1",
+      "payload_file": "data/payloads/posts_put.json",
+      "expected_file": "data/expectations/posts_put.json"
+    },
+    "posts_delete": {
+      "method": "DELETE",
+      "path": "/posts/1",
+      "params": {},
+      "expected_file": "data/expectations/posts_delete.json"
+    }
+  }
+}
