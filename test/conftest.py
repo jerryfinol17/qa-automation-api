@@ -4,7 +4,7 @@ import os
 
 @pytest.fixture(scope="session")
 def base_url():
-    return "https://reqres.in/api/"
+    return "https://reqres.in/api"
 
 @pytest.fixture(scope="session")
 def load_config():

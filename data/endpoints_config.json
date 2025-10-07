@@ -1,4 +1,5 @@
 {
+  "api_key": "reqres-free-v1",
   "endpoints": {
     "users_get": {
       "method": "GET",
