@@ -1,30 +1,28 @@
 {
   "endpoints": {
-    "posts_get": {
+    "users_get": {
       "method": "GET",
-      "path": "/posts",
-      "params": {
-        "optional_user_filter": {"userId": 1}
-      },
-      "expected_file": "data/expectations/posts_get.json"
-    },
-    "posts_post": {
-      "method": "POST",
-      "path": "/posts",
-      "payload_file": "data/payloads/posts_post.json",
-      "expected_file": "data/expectations/posts_post.json"
-    },
-    "posts_put": {
-      "method": "PUT",
-      "path": "/posts/1",
-      "payload_file": "data/payloads/posts_put.json",
-      "expected_file": "data/expectations/posts_put.json"
-    },
-    "posts_delete": {
-      "method": "DELETE",
-      "path": "/posts/1",
+      "path": "/users",
       "params": {},
-      "expected_file": "data/expectations/posts_delete.json"
+      "expected_file": "data/expectations/users_get.json"
+    },
+    "users_post": {
+      "method": "POST",
+      "path": "/users",
+      "payload_file": "data/payloads/users_post.json",
+      "expected_file": "data/expectations/users_post.json"
+    },
+    "users_put": {
+      "method": "PUT",
+      "path": "/users/2",
+      "payload_file": "data/payloads/users_put.json",
+      "expected_file": "data/expectations/users_put.json"
+    },
+    "users_delete": {
+      "method": "DELETE",
+      "path": "/users/2",
+      "params": {},
+      "expected_file": "data/expectations/users_delete.json"
     }
   }
 }

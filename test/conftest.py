@@ -15,7 +15,7 @@ def load_config():
 @pytest.fixture(scope="function")
 def load_payload(request):
     endpoint = request.param
-    payload_path = os.path.join(os.path.dirname(__file__), "..", "data", "payloads", "posts_payloads.json")
+    payload_path = os.path.join(os.path.dirname(__file__), "..", "data", "payloads", "users_payloads.json")
     try:
         with open(payload_path, "r") as f:
             payloads = json.load(f)
@@ -25,7 +25,7 @@ def load_payload(request):
         return (None, endpoint)
 @pytest.fixture(scope="session")
 def load_expectation():
-    expectations_path = os.path.join(os.path.dirname(__file__), "..", "data", "expectations", "posts_expectations.json")
+    expectations_path = os.path.join(os.path.dirname(__file__), "..", "data", "expectations", "users_expectations.json")
     with open(expectations_path, "r") as f:
         data = json.load(f)
         return data

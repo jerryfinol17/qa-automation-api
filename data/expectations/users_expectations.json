@@ -1,0 +1,22 @@
+{
+  "users_get": {
+    "status_code": 200,
+    "response_type": "list",
+    "required_keys": ["id", "email", "first_name", "last_name", "avatar"]
+  },
+  "users_post": {
+    "status_code": 201,
+    "response_type": "dict",
+    "required_keys": ["id", "createdAt"]
+  },
+  "users_put": {
+    "status_code": 200,
+    "response_type": "dict",
+    "required_keys": ["updatedAt"]
+  },
+  "users_delete": {
+    "status_code": 204,
+    "response_type": "none",
+    "required_keys": []
+  }
+}
