@@ -1,8 +1,8 @@
 import pytest
 
 def test_check_base_and_config(base_url, load_config, load_expectation):
-    assert base_url == "https://jsonplaceholder.typicode.com/"
-    config = load_config["endpoints"]  # Accede al nesting
+    assert base_url == "https://reqres.in/api/"
+    config = load_config["endpoints"]
     assert "posts_get" in config
     exp = load_expectation
     assert exp["posts_get"]["status_code"] == 200
