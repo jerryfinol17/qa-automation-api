@@ -1,6 +1,25 @@
 {
   "api_key": "reqres-free-v1",
+
   "endpoints": {
+    "auth_register": {
+      "method": "POST",
+      "path": "/register",
+      "payload_file": "data/payloads/auth_payloads.json",
+      "expected_file": "data/expectations/auth_expectations.json"
+    },
+    "auth_login": {
+      "method": "POST",
+      "path": "/login",
+      "payload_file": "data/payloads/auth_payloads.json",
+      "expected_file": "data/expectations/auth_expectations.json"
+    },
+    "auth_protected_get": {
+      "method": "GET",
+      "path": "/users",
+      "params": {},
+      "expected_file": "data/expectations/users_expectations.json"
+    },
     "users_get": {
       "method": "GET",
       "path": "/users",

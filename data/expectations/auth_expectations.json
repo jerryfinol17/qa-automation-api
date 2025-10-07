@@ -1,0 +1,18 @@
+{
+  "auth_register_valid": {
+    "status_code": 200,
+    "required_keys": ["id"]
+  },
+  "auth_register_invalid": {
+    "status_code": 400,
+    "required_keys": ["error"]
+  },
+  "auth_login_valid": {
+    "status_code": 200,
+    "required_keys": ["token"]
+  },
+  "auth_login_invalid": {
+    "status_code": 400,
+    "required_keys": ["error"]
+  }
+}

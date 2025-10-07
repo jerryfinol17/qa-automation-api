@@ -1,0 +1,16 @@
+{
+  "auth_register_valid": {
+    "email": "eve.holt@reqres.in",
+    "password": "pistol"
+  },
+  "auth_register_invalid": {
+    "email": "santa@reqres.in"
+  },
+  "auth_login_valid": {
+    "email": "eve.holt@reqres.in",
+    "password": "pistol"
+  },
+  "auth_login_invalid": {
+    "email": "peter@klaven"
+  }
+}

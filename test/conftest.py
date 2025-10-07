@@ -13,6 +13,25 @@ def load_config():
         return json.load(f)
 
 @pytest.fixture(scope="function")
+def load_auth_payload(request):
+    endpoint = request.param
+    payload_path = os.path.join(os.path.dirname(__file__), "..", "data", "payloads", "auth_payloads.json")
+    try:
+        with open(payload_path, "r") as f:
+            payload = json.load(f)
+            payload = payload.get(endpoint,None)
+            return (payload, endpoint)
+    except (FileNotFoundError, KeyError):
+        return (None, endpoint)
+
+@pytest.fixture(scope="session")
+def load_auth_expectation():
+    expectations_path = os.path.join(os.path.dirname(__file__), "..", "data", "expectations", "auth_expectations.json")
+    with open(expectations_path, "r") as f:
+        data = json.load(f)
+        return data
+
+@pytest.fixture(scope="function")
 def load_payload(request):
     endpoint = request.param
     payload_path = os.path.join(os.path.dirname(__file__), "..", "data", "payloads", "users_payloads.json")
