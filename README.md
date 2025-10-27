@@ -1,11 +1,11 @@
 ## API Testing Playground: CRUD on JSONPlaceholderHey!
-I'm Jerry, and this is my API testing playground: experiments, tips, and live code for CRUD ops on JSONPlaceholder. Built with Python, pytest, and Allure for fun, robust checks—data-driven and CI-ready. Hope it sparks ideas or saves you some headaches! Got tweaks? Hit me with 'em—no mercy! ;) 
+I'm Jerry, and this is my API testing playground: experiments, tips, and live code for CRUD ops on Reqres.in. Built with Python, pytest, and Allure for fun, robust checks—data-driven and CI-ready. Hope it sparks ideas or saves you some headaches! Got tweaks? Hit me with 'em—no mercy! ;) 
 ## Technologies:
 - Python 3.9+
 - pytest for testing
 - requests for HTTP calls
 - Allure for visual reports
-- JSONPlaceholder API for demos
+- Reqres.in for demos
 
 ## How to Run the TestsClone the repo:
 1. git clone https://github.com/jerryfinol17/qa-automation-api.git
