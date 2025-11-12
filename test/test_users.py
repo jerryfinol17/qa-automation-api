@@ -18,7 +18,7 @@ def test_crud_posts(base_url, load_config, load_payload, load_expectation):
 
     with step(f"Execute {config['method']} request to {url}"):
         if config["method"] == "GET":
-            response = requests.get(url, params=params)
+            response = requests.get(url, params=params, headers=headers)
         elif config["method"] == "POST":
             response = requests.post(url, json=payload, headers=headers)
         elif config["method"] == "PUT":
@@ -47,12 +47,13 @@ def test_crud_posts(base_url, load_config, load_payload, load_expectation):
                     assert all(key in data for key in expected["required_keys"])
 
 
-def test_users_get_with_page_filter(base_url, load_expectation):
+def test_users_get_with_page_filter(base_url, load_expectation, load_config):
     url = base_url + "/users"
     params = {"page": 2}
     expected = load_expectation["users_get"]
+    headers = {"x-api-key": load_config.get("api_key", "reqres-free-v1")}
     with step("Execute GET /users with page=2 filter"):
-        response = requests.get(url, params=params)
+        response = requests.get(url, params=params, headers=headers)
         response.raise_for_status()
     with step("Validate paginated response"):
         json_data = response.json()
