@@ -12,7 +12,7 @@ def test_auth_register_login(base_url, load_config,load_auth_payload,load_auth_e
 	config = load_config["endpoints"][config_key]
 	expected = load_auth_expectation[endpoint]
 	url = base_url + config["path"]
-	headers = {"x-api-key": "reqres-free-v1"}
+	headers = {"x-api-key": load_config["api_key"]}
 
 	with step(f"Execute {config['method']}{endpoint} to {url} with payload: {payload}"):
 		response = requests.post(url, json=payload, headers=headers)
